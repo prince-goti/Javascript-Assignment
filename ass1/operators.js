@@ -58,6 +58,29 @@ let number8 = 10
 
 console.log(number7 != number8) //true
 
+// strickly equal
+let number9 = 10
+let number10 = 10
+
+console.log(number9 === number10) //true
+
+let number11 = 11
+let number12 = '10'
+console.log(number11 === number12)  //false
+
+//strickly not-equal
+let number13 = 10
+let number14= 12
+
+console.log(number13 !== number14) //false
+
+let number15 = 11
+let number16 = 10
+
+console.log(number15 !== number16)  //true
+
+
+
 
 
 
