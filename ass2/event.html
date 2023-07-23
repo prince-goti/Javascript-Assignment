@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          #dng{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+          }
+    </style>
+</head>
+<body>
+
+    <div id="dng">
+        DANGER
+    </div>
+    <button id="btn">click me</button><br>
+    <button id="dbl">double click me</button>
+    <label for="" id="lbl">hey, i'm prince goti</label><br>
+    <span id="spn">0</span>
+</body>
+
+<script>
+    let click = document.getElementById('btn')
+    let dblclick = document.getElementById('dbl')
+    let mouse = document.getElementById('dng')
+    let key = document.getElementById('lbl')
+    let updown = document.getElementById('spn')
+    click.addEventListener("click",() =>{
+         document.getElementById('btn').style.background = 'red'
+    })
+
+    dblclick.addEventListener('dblclick',() =>{
+        document.getElementById('dbl').style.background ='blue'
+    })
+
+    mouse.addEventListener('mouseover',function(){
+    alert ("you are enter a danger area")
+    })
+
+    mouse.addEventListener('mouseout',function(){
+    alert ("you are close a danger area")
+    })
+    
+    key.addEventListener('keypress',() =>{
+          key.innerText = "i'm happy to press key on my site"
+    })
+
+    updown.addEventListener('keyup', () =>{
+           const value = Number(updown.innerText)
+           
+    })
+
+
+
+
+
+</script>
+</html>

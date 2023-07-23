@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display:grid;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size:xx-large;
+            font-weight: 900;
+        }
+        #dec{
+            margin: 10px;
+            padding: 10px;
+        }
+        #inc{
+            margin: 10px;
+            padding: 10px;
+        }
+        #reset{
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter App</h1>
+    <div>
+    <button id="dec">Decrement by 1</button>
+    <span id="inp">0</span>
+    <button id="inc">Increment by 1</button><br>
+    </div>
+    <button id="reset">Reset value</button>
+    <script>
+       let dec = document.getElementById('dec')
+       let inp = document.getElementById('inp')
+       let inc = document.getElementById('inc')
+       let reset = document.getElementById('reset')
+      dec.addEventListener("click",() =>{
+            const value = Number(inp.innerText)
+            if (value > 0){
+                inp.innerText = value - 1
+            }
+            else{
+                alert("negative value not allowed")
+            }
+      })
+
+      inc.addEventListener("click",() => {
+         const value = Number(inp.innerText)
+         if(value >= 10){
+           alert("10+ value are not allowed")
+         }
+         else{
+            inp.innerText = value + 1
+         }
+
+      })
+
+      reset.addEventListener("click",() => {
+        inp.innerText = 0
+      })
+    </script>
+</body>
+</html>

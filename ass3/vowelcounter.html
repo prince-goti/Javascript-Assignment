@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">vowel name :</label>
+    <input type="text" name="" id="username">
+    <button onclick="btnclick()">submit</button>
+
+    <script>
+        
+    
+        
+        function btnclick(){
+            let name = document.getElementById('username').value
+            vowelfound = ''
+            vowelcount = 0
+            // alert(input.value)
+          for (let i = 0; i < name.length ; i++){
+            const str = name.charAt(i)
+            if(str == 'a' || str == 'e' || str == 'i' || str == 'o' || str == 'u'){
+                 vowelcount++
+                 vowelfound = vowelfound + str
+                 
+             }
+        
+            }
+            alert("vowel" + vowelfound + "  total number of vowel" + vowelcount)
+        }
+
+        
+
+        //     
+    </script>
+</body>
+</html>

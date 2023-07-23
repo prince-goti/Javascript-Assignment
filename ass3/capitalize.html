@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">enter your name :</label>
+    <input type="text" id="name"> 
+    <button id="btn">submit</button>
+</body>
+<script>
+    let input = document.getElementById('name')
+    let submit = document.getElementById('btn')
+    // console.log(input, submit)
+    function namechange(){
+
+        const temparr = input.value.split("");
+
+        if (temparr[0] >= 'a' && temparr[0] <= 'z'){
+        temparr[0] = temparr[0].toUpperCase()
+    }
+
+    input = temparr.join('')
+    //console.log(input)
+    alert(input)
+    
+}
+submit.addEventListener('click', namechange)
+
+
+    
+
+</script>
+</html>
